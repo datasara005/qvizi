@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Search, Moon, Sun, Plus, ChevronDown } from 'lucide-react';
+import EmptySvg from './assets/empty.svg';
 
 interface Todo {
   id: number;
@@ -88,7 +89,7 @@ const App = () => {
         {filteredTodos.length === 0 ? (
           <div className="text-center py-10">
             <img 
-              src="/empty-state.png" 
+              src={EmptySvg}
               alt="Empty state" 
               className="w-32 h-32 mx-auto mb-4"
             />
